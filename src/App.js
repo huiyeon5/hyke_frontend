@@ -1,9 +1,9 @@
 import React from 'react';
 import './styles/tailwind.css';
 // import Navbar from './components/Navbar'
-import Landing from './components/Landing'
-import About from './components/About'
-import Course from './components/Course'
+import Landing from './pages/Landing'
+import About from './pages/About'
+import Course from './pages/Course'
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 function App() {

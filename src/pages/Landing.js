@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from './Navbar';
-import {Link} from 'react-router-dom';
+import Navbar from '../components/Navbar';
+import NavButton from '../components/NavButton';
 import '../styles/animation.css'
 
 
@@ -18,7 +18,7 @@ const Landing = () => {
                   <h1 className="text-6xl text-white" style={{fontFamily:`Rubik`}}>Hyke Up <br/> Your Skills</h1>
                   <p className="text-white leading-loose mt-6" style={{fontFamily:`Rubik`}}>Ut enim ad minima veniam quis nostrum exercitationem ullam corporis at suscipit laboriosam nisi ut aliquid a commodi consequatur Quis autem.</p>
                   <div className="mt-10">
-                    <Link to="/course" className="py-3 px-10 border border-orange-500 rounded mr-6 text-center align-middle leading-normal bg-orange-500 text-white">Get Started</Link>
+                    <NavButton destination='/course' buttonName='Get Started' />
                   </div>
                 </div>
                 <div className="w-7/12 flex justify-start items-center flex-col relative">
