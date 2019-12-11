@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const User = require('../models/User')
+const UserController = require('../controllers/UserController');
 
 /* GET ALL USERS */
 router.get('/', async (req, res) => {
@@ -12,6 +13,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+
 // Get one user
 router.get('/:id', async (req, res) => {
   try {
@@ -22,22 +24,16 @@ router.get('/:id', async (req, res) => {
   }
 })
 
+router.post('/signup', async (req, res) => {
+
+})
+
+router.post('/login', async (req, res) => {
+  
+})
 // Create one user
 router.post('/', async (req, res) => {
-  const user = new User({
-    full_name: req.body.full_name,
-    email: req.body.email,
-    password: req.body.password,
-    courses_owned: [],
-    wish_list: []
-  })
-
-  try {
-    const newUser = await user.save()
-    res.status(201).json(newUser)
-  } catch (err) {
-    res.status(400).json({ message: err.message })
-  }
+  
 })
 
 // Update one user
